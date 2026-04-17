@@ -159,49 +159,49 @@ export default function App() {
           <div className="space-y-10 md:space-y-12">
             <TimelineItem 
               year="Year 0–1"
-              title="Stage 1: Review Season"
+              title="Review Season"
               description="Right after graduation, focusing fully on reviewing for the CPA board exam. Days are slow and disciplined. Progress feels small, but steady. There are doubts, pressure, and moments of fear—but also deep trust. Learning that waiting is not wasted time, but preparation."
               icon={BookOpen}
             />
             
             <TimelineItem 
               year="Years 1–3"
-              title="Stage 2: Becoming a CPA"
+              title="Becoming a CPA"
               description="Passing the board exam and earning the CPA title. Stepping into the real world of work—learning, adjusting, growing. Building skills, confidence, and independence. Choosing to do things with honesty and excellence, even when no one is watching."
               icon={Award}
             />
 
             <TimelineItem 
               year="Years 3–5"
-              title="Stage 3: Preparing for Something Bigger"
+              title="Preparing for Something Bigger"
               description="Continuing to work while preparing for law school. Saving, planning, and strengthening the reason behind the dream. Staying close to advocacy—especially for women and justice. Knowing this next step is not just ambition, but calling."
               icon={Map}
             />
 
             <TimelineItem 
               year="Years 5–10"
-              title="Stage 4: Law School Years"
+              title="Law School Years"
               description="Entering law school and choosing to stay, even when it gets hard. Reading, writing, thinking deeply. Growing not just in knowledge, but in courage. Learning to speak, to question, and to stand firm. Holding on to purpose through every challenge."
               icon={Bookmark}
             />
 
             <TimelineItem 
               year="Years 10–12"
-              title="Stage 5: Becoming a Lawyer"
+              title="Becoming a Lawyer"
               description="Passing the bar and becoming a lawyer. Carrying both titles: CPA and Lawyer. Stepping into a profession with power—and choosing to use it with care, fairness, and integrity."
               icon={Scale}
             />
 
             <TimelineItem 
               year="Years 12–15"
-              title="Stage 6: Building a Meaningful Career"
+              title="Building a Meaningful Career"
               description="Using both skills—law and accountancy—to create real impact. Taking on work that matters. Standing for what is right, even when it is not easy. Becoming known not just for skill, but for values."
               icon={Milestone}
             />
 
             <TimelineItem 
               year="Years 15–20"
-              title="Stage 7: Leadership and Legacy"
+              title="Leadership and Legacy"
               description="Growing into a leader and an advocate. Lifting others, especially women. Speaking for those who are unheard. Creating change that lasts. Living a life that is not only successful—but meaningful, honest, and full of purpose."
               icon={HeartHandshake}
               isLast={true}

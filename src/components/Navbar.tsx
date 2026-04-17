@@ -2,7 +2,7 @@
 
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { Menu, X, Home, Map as MapIcon } from 'lucide-react';
+import { Menu, X, Home, Map as MapIcon, BookHeart } from 'lucide-react';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -21,6 +21,10 @@ const Navbar = () => {
               <Link href="/" className="text-blue-100 hover:bg-blue-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2">
                 <Home size={16} />
                 Home
+              </Link>
+              <Link href="/conversion-story" className="text-blue-100 hover:bg-blue-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2">
+                <BookHeart size={16} />
+                Conversion Story
               </Link>
               <Link href="/journey-map" className="text-blue-100 hover:bg-blue-800 hover:text-white px-3 py-2 rounded-md text-sm font-medium transition-colors flex items-center gap-2">
                 <MapIcon size={16} />
@@ -58,6 +62,14 @@ const Navbar = () => {
             >
               <Home size={18} />
               Home
+            </Link>
+            <Link 
+              href="/conversion-story" 
+              className="text-blue-100 hover:bg-blue-800 hover:text-white block px-3 py-2 rounded-md text-base font-medium flex items-center gap-2"
+              onClick={() => setIsOpen(false)}
+            >
+              <BookHeart size={18} />
+              Conversion Story
             </Link>
             <Link 
               href="/journey-map" 
