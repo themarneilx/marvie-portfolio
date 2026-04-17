@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from 'react';
-import { Maximize, Minimize, Download } from 'lucide-react';
+import { Maximize, Minimize } from 'lucide-react';
 
 export default function JourneyMapPDF() {
   const [isFullscreen, setIsFullscreen] = useState(false);
@@ -37,14 +37,6 @@ export default function JourneyMapPDF() {
           </div>
 
           <div className="flex items-center gap-4">
-            <a 
-              href="/journey-map.pdf" 
-              download="BOSQUE_Ma_Marvie_AdDU_Journey_Map.pdf"
-              className="text-slate-500 hover:text-slate-800 transition-colors p-1.5 rounded-md hover:bg-slate-200"
-              title="Download PDF"
-            >
-              <Download size={18} />
-            </a>
             <button 
               onClick={() => setIsFullscreen(!isFullscreen)} 
               className="text-slate-500 hover:text-slate-800 transition-colors p-1.5 rounded-md hover:bg-slate-200"
@@ -55,12 +47,12 @@ export default function JourneyMapPDF() {
           </div>
         </div>
 
-        {/* The PDF iframe */}
+        {/* The PDF embed */}
         <div className="w-full flex-grow relative bg-[#525659]">
-           {/* Fallback loading/background color matches typical PDF viewers to make iframe blend better, 
-               but the iframe itself will render the PDF with toolbar disabled. */}
-           <iframe 
-             src="/journey-map.pdf#toolbar=0&navpanes=0&scrollbar=0&view=FitH" 
+           {/* Fallback loading/background color matches typical PDF viewers to make embed blend better */}
+           <embed 
+             src="/journey-map.pdf#toolbar=0&navpanes=0&scrollbar=0" 
+             type="application/pdf"
              className="absolute inset-0 w-full h-full border-none"
              title="Journey Map PDF Document"
              style={{ backgroundColor: '#525659' }}

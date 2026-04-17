@@ -1,10 +1,72 @@
 import React from 'react';
-import { Target, Heart, Compass, Milestone, BookOpen, Scale, HeartHandshake } from 'lucide-react';
-import DenimButton from '@/components/DenimButton';
-import WhitePatch from '@/components/WhitePatch';
-import TimelineItem from '@/components/TimelineItem';
+import { Target, Heart, Compass, Map, Milestone, BookOpen, Scale, Award, HeartHandshake, Bookmark } from 'lucide-react';
 
-export default function Home() {
+// --- Aesthetic UI Components (Inspired by the uploaded image) ---
+
+const DenimButton = ({ className = "" }) => (
+  <div className={`w-16 h-16 md:w-20 md:h-20 rounded-full bg-blue-500 shadow-[inset_0_-4px_6px_rgba(0,0,0,0.3),0_4px_10px_rgba(0,0,0,0.5)] flex items-center justify-center border-4 border-blue-700 relative ${className}`}>
+    {/* Inner rim */}
+    <div className="absolute inset-1 border-2 border-blue-400 rounded-full opacity-50"></div>
+    {/* 4 Button Holes */}
+    <div className="grid grid-cols-2 gap-2 md:gap-3 z-0">
+      <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-blue-900 shadow-inner"></div>
+      <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-blue-900 shadow-inner"></div>
+      <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-blue-900 shadow-inner"></div>
+      <div className="w-2 h-2 md:w-3 md:h-3 rounded-full bg-blue-900 shadow-inner"></div>
+    </div>
+    {/* White Thread X */}
+    <div className="absolute inset-0 flex items-center justify-center z-10 drop-shadow-md">
+      <div className="w-6 h-1.5 md:w-8 md:h-2 bg-slate-100 rotate-45 rounded-full absolute"></div>
+      <div className="w-6 h-1.5 md:w-8 md:h-2 bg-slate-100 -rotate-45 rounded-full absolute"></div>
+    </div>
+  </div>
+);
+
+const WhitePatch = ({ children, title, icon: Icon }: any) => (
+  <div className="relative bg-slate-50 text-slate-800 rounded-[3rem] p-8 md:p-12 shadow-2xl overflow-hidden mb-16 transform transition-transform hover:-translate-y-1">
+    {/* Stitched border inner */}
+    <div className="absolute inset-3 border-[3px] border-dashed border-blue-300 rounded-[2.5rem] pointer-events-none"></div>
+    
+    <div className="relative z-10 flex flex-col items-center">
+      {Icon && (
+        <div className="bg-blue-100 p-4 rounded-full mb-4 text-blue-700 shadow-inner">
+          <Icon size={32} />
+        </div>
+      )}
+      <h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-blue-900 tracking-tight" style={{ fontFamily: "'Fredoka', 'Quicksand', sans-serif", lineHeight: "1.3" }}>
+        {title}
+      </h2>
+      <div className="text-lg md:text-xl leading-relaxed text-slate-700 space-y-6 text-justify w-full max-w-4xl">
+        {children}
+      </div>
+    </div>
+  </div>
+);
+
+const TimelineItem = ({ year, title, description, icon: Icon, isLast }: any) => (
+  <div className="flex flex-col md:flex-row gap-6 relative">
+    {/* Vertical Line for Desktop */}
+    {!isLast && <div className="hidden md:block absolute left-8 top-16 bottom-[-2rem] w-[3px] bg-dashed border-l-[3px] border-dashed border-blue-300 z-0"></div>}
+    
+    <div className="flex-none flex items-center md:items-start justify-center z-10">
+      <div className="w-16 h-16 rounded-full bg-blue-600 text-white flex items-center justify-center shadow-lg border-4 border-slate-50">
+        <Icon size={24} />
+      </div>
+    </div>
+    
+    <div className="flex-grow bg-white bg-opacity-60 rounded-2xl p-6 shadow-sm border border-blue-100 hover:bg-opacity-100 transition-all">
+      <div className="text-blue-800 font-bold text-xl mb-2 flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+        <span>{title}</span>
+        <span className="text-sm font-semibold bg-blue-100 text-blue-800 px-3 py-1 rounded-full whitespace-nowrap self-start sm:self-auto">{year}</span>
+      </div>
+      <p className="text-slate-600 leading-relaxed" style={{ fontFamily: "'Century Gothic', CenturyGothic, AppleGothic, sans-serif" }}>{description}</p>
+    </div>
+  </div>
+);
+
+// --- Main Application ---
+
+export default function App() {
   return (
     <div className="min-h-screen bg-blue-800 relative py-12 px-4 sm:px-6 lg:px-8 font-sans"
          style={{
@@ -89,37 +151,58 @@ export default function Home() {
         </WhitePatch>
 
         {/* 3. 10–20 Year Passion Plan */}
-        <WhitePatch title="10–20 Year Passion Plan" icon={Compass}>
-          <p className="text-center text-slate-600 mb-10 text-base md:text-lg">
-            A long-term roadmap outlining my envisioned vocation as a Certified Public Accountant, focusing on ethical leadership and creating a life of purpose.
+        <WhitePatch title="10–20 Year Passion Plan: Becoming a CPA-Lawyer for Justice and Purpose" icon={Compass}>
+          <p className="text-center text-slate-600 mb-10 text-base md:text-lg italic" style={{ fontFamily: "'Century Gothic', CenturyGothic, AppleGothic, sans-serif" }}>
+            "A long path rising forward, starting at graduation and leading toward a life of impact."
           </p>
 
           <div className="space-y-10 md:space-y-12">
             <TimelineItem 
-              year="Years 1–3"
-              title="The Foundation: Licensure & Early Practice"
-              description="Graduate with honors from AdDU. Successfully pass the rigorous CPA Licensure Examination (CPALE). Begin my career as an Audit Associate at a prestigious auditing firm (e.g., SGV/EY, PwC) to build a robust foundation in assurance, tax, and corporate systems."
+              year="Year 0–1"
+              title="Stage 1: Review Season"
+              description="Right after graduation, focusing fully on reviewing for the CPA board exam. Days are slow and disciplined. Progress feels small, but steady. There are doubts, pressure, and moments of fear—but also deep trust. Learning that waiting is not wasted time, but preparation."
               icon={BookOpen}
             />
             
             <TimelineItem 
-              year="Years 4–7"
-              title="Mastery & Expanding Horizons"
-              description="Ascend to a Senior Auditor or Managerial role. Deepen my expertise in risk management and corporate governance. During this phase, I plan to either pursue an MBA to sharpen my strategic business acumen or enter Law School (Ateneo Law) to specialize in corporate and tax law."
+              year="Years 1–3"
+              title="Stage 2: Becoming a CPA"
+              description="Passing the board exam and earning the CPA title. Stepping into the real world of work—learning, adjusting, growing. Building skills, confidence, and independence. Choosing to do things with honesty and excellence, even when no one is watching."
+              icon={Award}
+            />
+
+            <TimelineItem 
+              year="Years 3–5"
+              title="Stage 3: Preparing for Something Bigger"
+              description="Continuing to work while preparing for law school. Saving, planning, and strengthening the reason behind the dream. Staying close to advocacy—especially for women and justice. Knowing this next step is not just ambition, but calling."
+              icon={Map}
+            />
+
+            <TimelineItem 
+              year="Years 5–10"
+              title="Stage 4: Law School Years"
+              description="Entering law school and choosing to stay, even when it gets hard. Reading, writing, thinking deeply. Growing not just in knowledge, but in courage. Learning to speak, to question, and to stand firm. Holding on to purpose through every challenge."
+              icon={Bookmark}
+            />
+
+            <TimelineItem 
+              year="Years 10–12"
+              title="Stage 5: Becoming a Lawyer"
+              description="Passing the bar and becoming a lawyer. Carrying both titles: CPA and Lawyer. Stepping into a profession with power—and choosing to use it with care, fairness, and integrity."
               icon={Scale}
             />
 
             <TimelineItem 
-              year="Years 8–12"
-              title="Leadership & Vocation"
-              description="Transition from external audit to a high-level Corporate Finance role (e.g., Financial Controller or budding CFO) or establish my own consulting firm in Davao. Marry the love of my life and begin building a family grounded in faith and mutual respect."
+              year="Years 12–15"
+              title="Stage 6: Building a Meaningful Career"
+              description="Using both skills—law and accountancy—to create real impact. Taking on work that matters. Standing for what is right, even when it is not easy. Becoming known not just for skill, but for values."
               icon={Milestone}
             />
 
             <TimelineItem 
-              year="Years 13–20"
-              title="Legacy, Giving Back, & Purpose"
-              description="Attain the position of CFO or Managing Partner. Actively give back by establishing a scholarship fund for underprivileged accountancy students in Mindanao. Dedicate time to teaching part-time at AdDU to mold the next generation of ethical CPAs. Maintain a beautiful balance between a thriving family life, my faith, and my profession."
+              year="Years 15–20"
+              title="Stage 7: Leadership and Legacy"
+              description="Growing into a leader and an advocate. Lifting others, especially women. Speaking for those who are unheard. Creating change that lasts. Living a life that is not only successful—but meaningful, honest, and full of purpose."
               icon={HeartHandshake}
               isLast={true}
             />
