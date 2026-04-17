@@ -127,7 +127,7 @@ export default function App() {
         {/* 1. Personal Mission Statement */}
         <WhitePatch title="Personal Mission Statement" icon={Target}>
           <p className="text-xl md:text-2xl leading-relaxed text-slate-700 text-center font-medium italic px-4 md:px-8" style={{ fontFamily: "'Century Gothic', CenturyGothic, AppleGothic, sans-serif" }}>
-            To forge a career of profound success anchored in unyielding integrity, transforming my profession into a catalyst for community upliftment and human progress. Embracing <span className="font-bold text-blue-800">cura personalis</span>, my ultimate pursuit is not mere professional triumph, but a quiet, enduring contentment found in making a meaningful impact on every life I am privileged to touch. Guided by the unwavering conviction of <span className="font-bold text-blue-800">Philippians 4:13: "I can do all things through Christ who strengthens me,"</span> I commit to serving with purpose, ensuring my life's work echoes far beyond the balance sheet as a testament to diligent care and authentic leadership.
+            I seek to build a life’s work marked not only by excellence, but by a steady and unyielding integrity, recognizing that true success is not merely achieved but lived through service. What I once measured through accomplishment, I now understand as an opportunity to uplift others, allowing my profession to become a quiet instrument for community and human flourishing. Embracing <span className="font-bold text-blue-800">cura personalis</span>, I am learning that fulfillment lies not in reaching a single peak, but in choosing, each day, to care with intention, humility, and sincerity. Guided by the assurance of <span className="font-bold text-blue-800">Philippians 4:13—“I can do all things through Christ who strengthens me”</span>—I move forward with trust over control, committing to lead and serve in a way that extends beyond outcomes, so that my life’s work reflects meaning, faith, and a quiet, enduring conviction.
           </p>
         </WhitePatch>
 
@@ -135,17 +135,17 @@ export default function App() {
         <WhitePatch title="Prayer for My Future Self" icon={Heart}>
           <div className="italic font-serif text-center px-4 md:px-12 text-blue-900 border-l-4 border-r-4 border-blue-200 py-6">
             <p className="mb-4">
-              "Lord, as I stand on the threshold of my professional journey, I lift my future self to You. 
-              Guide my mind as I prepare for the rigorous trials ahead, and keep my heart steadfast when the hours grow long and the challenges heavy."
+              Lord, as I stand on the threshold of my professional journey, I lift my future self to You. 
+              Guide my mind as I prepare for the rigorous trials ahead, and keep my heart steadfast when the hours grow long and the challenges heavy.
             </p>
             <p className="mb-4">
-              "Grant me the unwavering courage to always choose what is right over what is easy. When I am tempted to compromise my integrity, remind me of my roots and the truth I have promised to uphold. May my skills in accountancy be an instrument of Your justice and truth in the corporate world."
+              Grant me the unwavering courage to always choose what is right over what is easy. When I am tempted to compromise my integrity, remind me of my roots and the truth I have promised to uphold.
             </p>
             <p className="mb-4">
-              "I pray for a future where I am not just successful, but deeply purposeful. Help me grow into a leader who mentors with compassion, a provider who loves generously, and a citizen who builds up our nation."
+              I pray for a future where I am not just successful, but deeply purposeful. Help me grow into a leader who mentors with compassion, a provider who loves generously, and a citizen who builds up our nation.
             </p>
             <p>
-              "Keep me <em>Fortes in Fide</em>—strong in faith. Remind me always that my ultimate vocation is to be a person for and with others. Amen."
+              Keep me <em>Fortes in Fide</em>—strong in faith. Remind me always that my ultimate vocation is to be a person for and with others. Amen.
             </p>
           </div>
         </WhitePatch>
