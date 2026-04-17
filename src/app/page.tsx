@@ -126,7 +126,7 @@ export default function App() {
 
         {/* 1. Personal Mission Statement */}
         <WhitePatch title="Personal Mission Statement" icon={Target}>
-          <p className="text-xl md:text-2xl leading-relaxed text-slate-700 text-center font-medium italic px-4 md:px-8" style={{ fontFamily: "'Century Gothic', CenturyGothic, AppleGothic, sans-serif" }}>
+          <p className="text-xl md:text-2xl leading-relaxed text-slate-700 text-center font-medium px-4 md:px-8" style={{ fontFamily: "'Fredoka', 'Quicksand', sans-serif" }}>
             I seek to build a life’s work marked not only by excellence, but by a steady and unyielding integrity, recognizing that true success is not merely achieved but lived through service. What I once measured through accomplishment, I now understand as an opportunity to uplift others, allowing my profession to become a quiet instrument for community and human flourishing. Embracing <span className="font-bold text-blue-800">cura personalis</span>, I am learning that fulfillment lies not in reaching a single peak, but in choosing, each day, to care with intention, humility, and sincerity. Guided by the assurance of <span className="font-bold text-blue-800">Philippians 4:13—“I can do all things through Christ who strengthens me”</span>—I move forward with trust over control, committing to lead and serve in a way that extends beyond outcomes, so that my life’s work reflects meaning, faith, and a quiet, enduring conviction.
           </p>
         </WhitePatch>
